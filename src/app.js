@@ -5,8 +5,11 @@ const serverless = require("serverless-http");
 
 const router = express.Router();
 
-app.set("view engine","ejs");
-app.engine('ejs', require('ejs').__express);
+app.set("view engine","html");
+// app.engine('ejs', require('ejs').__express);
+
+app.use(express.static('./'));
+app.engine('html', require('ejs').renderFile);
 
 router.get('/',(req,res) => {
     res.render("home.html");
