@@ -12,7 +12,7 @@ app.use(express.static('../'));
 app.engine('html', require('ejs').renderFile);
 
 router.get('/',(req,res) => {
-    res.json({'njhv':'fjghgj'});
+    res.render("index.html");
 });
 
 app.use('/.netlify/functions/app',router);
