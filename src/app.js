@@ -8,7 +8,7 @@ app.set("view engine","ejs");
 app.engine('ejs', require('ejs').__express);
 
 router.get('/',(req,res) => {
-    res.render('home');
+    res.json({'Developed by ':" Akshat"});
 });
 
 app.use('/.netlify/functions/app',router);
