@@ -7,7 +7,7 @@ const router = express.Router();
 app.set("view engine","ejs");
 
 router.get('/',(req,res) => {
-    res.josn({'name':"akshat"});
+    res.json({'name':"akshat"});
 });
 
 app.use('/.netlify/functions/app',router);
