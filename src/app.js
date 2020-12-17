@@ -8,7 +8,7 @@ const router = express.Router();
 app.set("view engine","html");
 // app.engine('ejs', require('ejs').__express);
 
-app.use(express.static('/'));
+app.use(express.static('../'));
 app.engine('html', require('ejs').renderFile);
 
 router.get('/',(req,res) => {
