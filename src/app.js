@@ -4,6 +4,8 @@ const serverless = require("serverless-http");
 
 const router = express.Router();
 
+app.set("view engine","ejs");
+
 router.get('/',(req,res) => {
     res.json(
         {
