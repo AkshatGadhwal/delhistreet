@@ -12,7 +12,10 @@ app.use(express.static('../'));
 app.engine('html', require('ejs').renderFile);
 
 router.get('/',(req,res) => {
-    res.render("home.html");
+    res.json({
+        'Developed by: ':"Akshat",
+        'Issue: ':"it can only be a single page website :)"
+    });
 });
 
 app.use('/.netlify/functions/app',router);
