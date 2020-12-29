@@ -7,7 +7,7 @@ const router = express.Router();
 
 // app.set("view engine","html");
 app.engine('ejs', require('ejs').__express);
-app.set('views', '/.netlify/functions/views');
+app.set('views', '/views');
 app.set('view engine', 'ejs');
 
 // app.use(express.static('../'));
